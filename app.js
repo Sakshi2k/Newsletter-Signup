@@ -18,6 +18,7 @@ app.post("/", (req, res) => {
     const lastName = req.body.lname;
     const phNum = req.body.phNum;
     const email = req.body.email;
+    const msg = req.body.msg;
 
     // console.log(firstName, lastName, email);
     const data = {
@@ -28,7 +29,8 @@ app.post("/", (req, res) => {
         merge_fields : {
             FNAME : firstName,
             LNAME : lastName,
-            PHONE : phNum
+            PHONE : phNum,
+            MESSAGE : msg
         }
         }
     ]   

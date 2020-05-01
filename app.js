@@ -52,7 +52,6 @@ app.post("/", (req, res) => {
             res.sendFile(__dirname + "/success.html");
         }
         else res.sendFile(__dirname + "/failure.html");
-    // res.send("<h1>Hey</h1>");
     })
 
     request.write(jsonData);

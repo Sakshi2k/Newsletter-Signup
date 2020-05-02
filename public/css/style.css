@@ -55,6 +55,10 @@ h1{
   width: fit-content;
 }
 
+.mt-5, .my-5 {
+  margin-top: 1rem!important;
+}
+
 #hands-spock{
   color: rgb(112, 11, 170);
   font-weight: 900;

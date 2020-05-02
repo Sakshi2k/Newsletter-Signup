@@ -6,6 +6,8 @@ const https = require("https");
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+
+require('dotenv').config();
   
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/signup.html");
@@ -38,10 +40,10 @@ app.post("/", (req, res) => {
 
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us8.api.mailchimp.com/3.0/lists/529cffc56a";
+    const url = "https://us8.api.mailchimp.com/3.0/lists/"+process.env.MC_ListID;
     const options = {
         method: "POST",
-        auth: "saku:2ed996a859eb298e8a6e18646ed8e9b1-us8"
+        auth: process.env.MC_API_Key
     };
 
     const request = https.request(url, options, function(response) {
@@ -68,12 +70,3 @@ app.post("/failure",(req, res) => {
 app.listen(process.env.PORT || 3000, () =>{
     console.log("Listening at port 3000");
 });
-
-
-// API KEY :
-// 2ed996a859eb298e8a6e18646ed8e9b1-us8
-
-//List ID:
-// 529cffc56a
-
-//https://infinite-wildwood-17047.herokuapp.com/

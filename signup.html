@@ -15,28 +15,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
   </head>
-  <body class="text-center">
-    <form action="/" class="form-signin" method="POST">
-    <h1 class="display-4">Enter details </h1>
-    <p>Stay in touch <i class="fa fa-heart"></i></p><br/>
-    
-    <input type="text" name="fname" class="form-control top" 
-          placeholder="First Name" required>
-    <input type="text" name="lname" class="form-control middle" 
-          placeholder="Last Name" required>
-    <input type="" name="phNum" class="form-control middle"  id="number_input"
-          placeholder="Phone number">
-    <input type="text" name="email" class="form-control middle" 
-          placeholder="Email" required>
-    <input type="textbox" name="msg" class="form-control"
-          placeholder="Your message">
+  <body>
+      <div class="container">
+      <form action="/" class="form-signin" method="POST">
+            <h1 class="display-4">Enter details </h1>
+            <center><p>Stay in touch <i class="fa fa-heart"></i></p></center>
+            <br/>            
+            <input type="text" name="fname" class="form-control top" 
+                  placeholder="First Name" required>
+            <input type="text" name="lname" class="form-control middle" 
+                  placeholder="Last Name" required>
+            <input type="" name="phNum" class="form-control middle"  id="number_input"
+                  placeholder="Phone number">
+            <input type="text" name="email" class="form-control middle" 
+                  placeholder="Email" required>
+            <input type="textbox" name="msg" class="form-control"
+                  placeholder="Your message">
 
-    <button class="btn btn-lg btn-secondary btn-block" type="submit" id="submit-btn">SUBSCRIBE
-      <span><i class="fa fa-check" aria-hidden="true"></i></span></button>
-
-    <p id="footer" class="mt-5 mb-3 text-muted">-- Saku <i class="fa fa-hand-spock-o" id ="hands-spock"aria-hidden="true"></i> --</p>
-    </form>
-
+            <button class="btn btn-lg btn-secondary btn-block" type="submit" id="submit-btn">SUBSCRIBE
+                  <span><i class="fa fa-check" aria-hidden="true"></i></span></button>
+            <br/>
+      </form>
+            <br/>
+      <center><p>Made with <i class="fa fa-heart" id ="hands-spock"aria-hidden="true"><a href="https://meet-sakshichoudhary.herokuapp.com/" id="footer"> by Sakshi</a></i></p></center>
+      </div>
     <script>
         input = document.getElementById("number_input")
         input.addEventListener("mousewheel", function(event){ this.blur() })
